@@ -1,7 +1,7 @@
 package main
 
 import (
-    //"github.com/kelseyhightower/envconfig"
+    "github.com/kelseyhightower/envconfig"
     log "github.com/Sirupsen/logrus"
     //etcd "github.com/coreos/etcd/client"
     //"github.com/mickep76/etcdmap"
@@ -12,14 +12,14 @@ import (
 
 // ExampleNestedStruct creates a Etcd directory using a nested Go struct and then gets the directory as JSON.
 func main() {
-    //var mwmConfig Config
+    var mwmConfig Config
     mwManager := &MWManager{}
 
-  /*  err := envconfig.Process("mwm", &mwmConfig)
+    err := envconfig.Process("mwm", &mwmConfig)
     if err != nil {
         log.Fatal(err.Error())
     }
-
+/*
     // Connect to etcd.
     cfg := etcd.Config{
         Endpoints:               strings.Split(*mwmConfig.EtcdEndPoints, ","),
