@@ -1,7 +1,7 @@
 FROM golang
 
-ADD . /go/src/github.com/meshwalker/mwm
+ADD . /go/src/meshwalker.com/mwm
 
-RUN go install github.com/meshwalker/mwm
+RUN go install meshwalker.com/mwm
 
 ENTRYPOINT ["mwm"]
